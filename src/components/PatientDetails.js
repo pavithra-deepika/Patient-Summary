@@ -1,13 +1,15 @@
 import React from 'react'
 
-function PatientDetails({patientData}) {
+function PatientDetails({patientJSONData}) {
   return (
     <div>
-        <h1> Patient Details</h1>
+        <h3> Patient Details</h3>
         <div>
-        <h3>patientId : {patientData.patientId}</h3>
-        <h3>diagnosis : {patientData.diagnosis}</h3>
-        <h3>pastMedicalHistory : {patientData.pastMedicalHistory}</h3>
+          {patientJSONData?.patient_detail.map(patientData => 
+
+          <p>{patientData.content}</p>
+          )}
+      
         </div>
     </div>
   )
