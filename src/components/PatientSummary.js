@@ -9,13 +9,15 @@ function PatientSummary({patientJSONData}) {
     <Box      
        sx={{
         width: 600,
-        height: 300,
-        backgroundColor: 'gray'
+        margin: "35px",
+        height: 'max-content',
+        backgroundColor: 'gray',
         }}>
         <h5>{data.date}</h5>
         <h5>{data.doctor}</h5>
         {data.summary.map(summaryData =>
-        <p>{summaryData.title}</p>)}
+         <span><p><strong>{summaryData.content.split(':')[0]}</strong>:{summaryData.content.split(':')[1]}</p></span>
+                )}
     </Box>
       )}
     </div>

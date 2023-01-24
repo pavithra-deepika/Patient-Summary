@@ -7,47 +7,29 @@ import Box from '@mui/material/Box';
 
 function App() {
 
-  const patientData = {
-    patientId : 101,
-    diagnosis : "DM.Hypothyroid",
-    pastMedicalHistory : "no", 
-    summary : [ {
-      visitId : 85632,
-      visitTime : 10.25,
-      visitDate: 12/5/2023
-    },
-    {
-      visitId : 85589,
-      visitTime : 10.25,
-      visitDate: 12/3/2023
-    },
-    {
-      visitId : 85879,
-      visitTime : 10.25,
-      visitDate: 12/2/2023
-    }
-
-    ]
-  }
   
   return (
     
     <div>
-         <h2> {patientJSONData.code}</h2>
-      
+         <h2> PatientDetails </h2>
       <Box      
        sx={{
-        width: 600,
-        height: 300,
+        width: 1000,
+        height: 150,
         backgroundColor: 'white'
         }}>
         
       <PatientDetails patientJSONData={patientJSONData}/>
       </Box>
       <div>
-
+      <Box      
+       sx={{
+        width: 1000,
+        height: 'max-content',
+        backgroundColor: 'white'
+        }}>
        <PatientSummary patientJSONData={patientJSONData} />
-       
+       </Box>
       </div>
 
     </div>
